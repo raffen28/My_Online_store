@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wireless Headphones</title>
+  <link rel="stylesheet" href="summa.css">
+</head>
+<body>
+
+<header>
+  <h1>Wireless Headphones</h1>
+  <a href="summa.html">
+    <img src="./image 9.png" alt="BuyGart Logo" class="logo">
+  </a>
+</header>
+<nav class="navbar">
+  <a href="./summa.html">Home</a>
+  <a href="./service.html">Service</a>
+  <a href="./contact.html">Contact</a>
+</nav>
+
+<main class="product-detail">
+  <img src="./wr2.jpg" alt="Wireless Headphones">
+  <div class="details">
+    <h2>₹1999</h2>
+    <p>boAt Rockerz 430 Bluetooth Headphones
+</p>
+    <button onclick="addToCart('Wireless Headphones', 1999)">Add to Cart</button>
+  </div>
+
+  <img src="./wr1.jpg" alt="Wireless Headphones">
+  <div class="details">
+    <h2>₹2999</h2>
+    <p>Noise Two Wireless Headphones
+</p>
+    <button onclick="addToCart('Wireless Headphones', 2999)">Add to Cart</button>
+  </div>
+
+ 
+ 
+
+  <img src="./wr3.jpg" alt="Wireless Headphones">
+  <div class="details">
+    <h2>₹3999</h2>
+    <p>JBL Tune 520BT Wireless On Ear Headphones with Mic
+</p>
+    <button onclick="addToCart('Wireless Headphones', 3999)">Add to Cart</button>
+  </div>
+</main>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.href = 'cart.html';
+  }
+</script>
+
+</body>
+</html>

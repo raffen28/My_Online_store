@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bluetooth speaker</title>
+  <link rel="stylesheet" href="summa.css">
+</head>
+<body>
+
+<header>
+  <h1>Bluetooth Speaker</h1>
+  <a href="summa.html">
+    <img src="./image 9.png" alt="BuyGart Logo" class="logo">
+  </a>
+</header>
+<nav class="navbar">
+  <a href="./summa.html">Home</a>
+  <a href="./service.html">Service</a>
+  <a href="./contact.html">Contact</a>
+</nav>
+
+<main class="product-detail">
+  <img src="./bs1.jpg" alt="bluetooth speaker">
+  <div class="details">
+    <h2>₹499</h2>
+    <p>Boat Stone 350 Pro Bluetooth Speaker
+</p>
+    <button onclick="addToCart('bluetooth speaker', 499)">Add to Cart</button>
+  </div>
+
+  <img src="./bs2.jpg" alt="bluetooth speaker">
+  <div class="details">
+    <h2>₹599</h2>
+    <p>Zebronics Zeb-Buddy 100 Portable BT v5.0 Speaker
+</p>
+    <button onclick="addToCart('bluetooth speaker', 599)">Add to Cart</button>
+  </div>
+
+ 
+ 
+
+  <img src="./bs3.jpg" alt="bluetooth speaker">
+  <div class="details">
+    <h2>₹799</h2>
+    <p>PTron Fusion Go Portable Bluetooth Speaker
+</p>
+    <button onclick="addToCart('bluetooth speaker', 799)">Add to Cart</button>
+  </div>
+</main>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.href = 'cart.html';
+  }
+</script>
+
+</body>
+</html>

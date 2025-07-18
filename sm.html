@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Watch</title>
+  <link rel="stylesheet" href="summa.css">
+</head>
+<body>
+
+<header>
+  <h1>Smart Watch</h1>
+  <a href="summa.html">
+    <img src="./image 9.png" alt="BuyGart Logo" class="logo">
+  </a>
+</header>
+<nav class="navbar">
+  <a href="./summa.html">Home</a>
+  <a href="./service.html">Service</a>
+  <a href="./contact.html">Contact</a>
+</nav>
+
+<main class="product-detail">
+  <img src="./sm1.jpg" alt="Smart Watch">
+  <div class="details">
+    <h2>₹1999</h2>
+    <p>Fire-Boltt Ninja Calling Pro Plus Smart Watch
+</p>
+    <button onclick="addToCart('Smart Watch', 1999)">Add to Cart</button>
+  </div>
+
+  <img src="./sm2.jpg" alt="Smart Watch">
+  <div class="details">
+    <h2>₹2999</h2>
+    <p>Redmi Watch Move Smartwatch
+</p>
+    <button onclick="addToCart('Smart Watch', 2999)">Add to Cart</button>
+  </div>
+
+ 
+ 
+
+  <img src="./sm3.jpg" alt="Smart Watch">
+  <div class="details">
+    <h2>₹3999</h2>
+    <p>Noise ColorFit Icon 2 Smartwatch
+</p>
+    <button onclick="addToCart('Smart Watch', 3999)">Add to Cart</button>
+  </div>
+</main>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+  function addToCart(name, price) {
+    cart.push({ name, price });
+    localStorage.setItem('cart', JSON.stringify(cart));
+    window.location.href = 'cart.html';
+  }
+</script>
+
+</body>
+</html>
